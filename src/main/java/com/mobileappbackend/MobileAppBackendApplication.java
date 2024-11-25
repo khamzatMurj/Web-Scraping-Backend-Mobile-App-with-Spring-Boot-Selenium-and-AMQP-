@@ -25,7 +25,6 @@ public class MobileAppBackendApplication {
                 website.setName(name);
                 website.setUrl("https://www." + name + ".com");
                 website.setDate_emissions(new Date());
-                System.out.println("hello");
 
                 Websiterepository.save(website);
             });
