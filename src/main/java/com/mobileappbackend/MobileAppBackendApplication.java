@@ -6,11 +6,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.config.EnableMongoAuditing;
 
 import java.util.Date;
 import java.util.stream.Stream;
 
+@Configuration
 @SpringBootApplication
+//@EnableMongoAuditing
 public class MobileAppBackendApplication {
 
     public static void main(String[] args) {
@@ -24,7 +28,6 @@ public class MobileAppBackendApplication {
                 website website = new website();
                 website.setName(name);
                 website.setUrl("https://www." + name + ".com");
-                website.setDate_emissions(new Date());
 
                 Websiterepository.save(website);
             });
