@@ -1,16 +1,16 @@
-#version: '3'
-#
-#services:
-#  rabbitmq:
-#    image: rabbitmq:3-management
-#    container_name: some-rabbit
-#    hostname: my-rabbit
-#    ports:
-#      - "5672:5672"    # Port pour les connexions AMQP
-#      - "15672:15672"  # Port pour l'interface de gestion (si activée)
-#    environment:
-#      RABBITMQ_DEFAULT_USER: root
-#      RABBITMQ_DEFAULT_PASS: root
-#
-#
-#
+version: '3'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: some-rabbit
+    hostname: my-rabbit
+    ports:
+      - "5672:5672"    # Port pour les connexions AMQP
+      - "15672:15672"  # Port pour l'interface de gestion (si activée)
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: root
+
+
+
