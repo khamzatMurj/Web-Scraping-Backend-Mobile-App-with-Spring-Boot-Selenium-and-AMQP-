@@ -11,7 +11,8 @@ public class RabbitMQSender {
     private final RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message) {
-        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, RabbitMQConfig.ROUTING_KEY, message);
+//        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, RabbitMQConfig.ROUTING_KEY, message);
+        rabbitTemplate.convertAndSend(RabbitMQConfig.EXCHANGE, message);
         System.out.println("Message sent: " + message);
     }
 }

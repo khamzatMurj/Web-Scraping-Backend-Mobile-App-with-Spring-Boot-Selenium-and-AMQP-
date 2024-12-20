@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMQConfig {
 
     public static final String QUEUE = "example.queue";
-    public static final String EXCHANGE = "example.exchange";
+    public static final String EXCHANGE = "scraper_requests";
     public static final String ROUTING_KEY = "example.routingkey";
 
     @Bean
