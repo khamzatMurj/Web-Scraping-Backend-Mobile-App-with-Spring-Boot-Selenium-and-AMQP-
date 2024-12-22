@@ -15,6 +15,7 @@ public class ScrapedData {
 
     private String image;
     private String url;
+    @JsonProperty("title")
     private String name;
     @JsonProperty("current_price") // Mapper la clé JSON "current_price"
     private String currentPrice;
