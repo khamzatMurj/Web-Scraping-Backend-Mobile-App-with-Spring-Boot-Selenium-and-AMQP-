@@ -1,9 +1,6 @@
 package com.mobileappbackend.amqp;
 
 import com.mobileappbackend.Config.RabbitMQConfig;
-import com.mobileappbackend.Dao.ElectroplanetRepository;
-import com.mobileappbackend.Dao.JumiaRepository;
-import com.mobileappbackend.Dao.MarjaneRepository;
 import com.mobileappbackend.Dao.ScrappedDataRepository;
 import com.mobileappbackend.Entities.ScrapedData;
 import lombok.RequiredArgsConstructor;
@@ -20,9 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class DataScrappedConsumer {
 
-    private final JumiaRepository jumiaRepository;
-    private final ElectroplanetRepository electroplanetRepository;
-    private final MarjaneRepository marjaneRepository;
+
     private final ScrappedDataRepository scrappedDat;
 
 
