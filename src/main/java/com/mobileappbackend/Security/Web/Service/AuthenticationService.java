@@ -1,9 +1,9 @@
-package com.mobileappbackend.ConfigAndSecurity.Web.Service;
+package com.mobileappbackend.Security.Web.Service;
 
-import com.mobileappbackend.ConfigAndSecurity.JwtService;
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.AuthenticationRequest;
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.AuthenticationResponse;
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.RegisterRequest;
+import com.mobileappbackend.Security.JwtService;
+import com.mobileappbackend.Security.Web.DTO.AuthenticationRequest;
+import com.mobileappbackend.Security.Web.DTO.AuthenticationResponse;
+import com.mobileappbackend.Security.Web.DTO.RegisterRequest;
 import com.mobileappbackend.Dao.IuserRepository;
 import com.mobileappbackend.Entities.User;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,5 @@
-package com.mobileappbackend.ConfigAndSecurity;
+package com.mobileappbackend.Security;
 
-import com.mobileappbackend.Entities.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

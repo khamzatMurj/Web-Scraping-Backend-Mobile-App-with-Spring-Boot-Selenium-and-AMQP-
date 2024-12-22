@@ -1,10 +1,10 @@
-package com.mobileappbackend.ConfigAndSecurity.Web;
+package com.mobileappbackend.Security.Web;
 
 
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.AuthenticationRequest;
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.AuthenticationResponse;
-import com.mobileappbackend.ConfigAndSecurity.Web.DTO.RegisterRequest;
-import com.mobileappbackend.ConfigAndSecurity.Web.Service.AuthenticationService;
+import com.mobileappbackend.Security.Web.DTO.AuthenticationRequest;
+import com.mobileappbackend.Security.Web.DTO.AuthenticationResponse;
+import com.mobileappbackend.Security.Web.DTO.RegisterRequest;
+import com.mobileappbackend.Security.Web.Service.AuthenticationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

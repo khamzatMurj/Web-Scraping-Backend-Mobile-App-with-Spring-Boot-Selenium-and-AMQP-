@@ -1,4 +1,4 @@
-package com.mobileappbackend.ConfigAndSecurity;
+package com.mobileappbackend.Security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

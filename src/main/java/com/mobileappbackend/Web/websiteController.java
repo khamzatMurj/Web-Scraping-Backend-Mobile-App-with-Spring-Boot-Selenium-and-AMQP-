@@ -18,7 +18,7 @@ public class websiteController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public websiteResponse getWebsite(@RequestBody WebsiteRequest website_Request) {
+    public websiteResponse add_Website_To_scrape_it(@RequestBody WebsiteRequest website_Request) {
         return website_Service.saveWebsite(website_Request);
     }
 }

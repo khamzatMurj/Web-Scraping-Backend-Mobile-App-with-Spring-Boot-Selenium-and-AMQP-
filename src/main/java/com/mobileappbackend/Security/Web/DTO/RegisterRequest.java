@@ -1,4 +1,4 @@
-package com.mobileappbackend.ConfigAndSecurity.Web.DTO;
+package com.mobileappbackend.Security.Web.DTO;
 
 import com.mobileappbackend.Entities.Enum.Role;
 import lombok.AllArgsConstructor;

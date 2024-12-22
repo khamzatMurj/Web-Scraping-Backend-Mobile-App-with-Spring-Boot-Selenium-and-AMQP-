@@ -1,4 +1,4 @@
-package com.mobileappbackend.ConfigAndSecurity;
+package com.mobileappbackend.Security;
 
 import com.mobileappbackend.Dao.IuserRepository;
 import lombok.RequiredArgsConstructor;
