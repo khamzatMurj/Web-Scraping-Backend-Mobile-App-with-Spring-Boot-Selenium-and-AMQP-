@@ -1,10 +1,11 @@
 package com.mobileappbackend.Security;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import com.mobileappbackend.Exceptions.JwtInValid;
+import com.mobileappbackend.Exceptions.JwtexpiredException;
+import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import io.jsonwebtoken.security.SignatureException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -27,12 +28,25 @@ public class JwtService {
 
 
     private Claims extractAllClaims(String token) {
-        return Jwts
-                .parserBuilder()
-                .setSigningKey(getSignInKey())
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
+        try {
+            return Jwts
+                    .parserBuilder()
+                    .setSigningKey(getSignInKey())
+                    .build()
+                    .parseClaimsJws(token)
+                    .getBody();
+
+        } catch (ExpiredJwtException e) {
+            throw new JwtexpiredException("Token Expired");
+        } catch (UnsupportedJwtException e) {
+            throw new JwtInValid("Token Unsupported");
+        } catch (MalformedJwtException e) {
+            throw new JwtInValid("Token Malformed");
+        } catch (SignatureException e) {
+            throw new JwtInValid("Token ! Invalid signature");
+        } catch (IllegalArgumentException e) {
+            throw new RuntimeException("Token Invalid !");
+        }
     }
 
     private Key getSignInKey() {
@@ -76,12 +90,20 @@ public class JwtService {
         return extractClaim(token, Claims::getExpiration);
     }
     private boolean isTokenExpired(String token) {
-        return extractExpiration(token).before(new Date());
+        try {
+            return extractExpiration(token).before(new Date());
+        } catch (JwtexpiredException e) {
+            throw new JwtexpiredException("Token Expired");
+        }
     }
 
     public boolean isTokenValid(String token, UserDetails userDetails) {
-        final String username = extractUsername(token);
-        return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
+        try {
+            final String username = extractUsername(token);
+            return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
+        } catch (JwtInValid e) {
+            throw new JwtInValid("Token Invalid");
+        }
     }
 
     public String generateToken(UserDetails userDetails) {

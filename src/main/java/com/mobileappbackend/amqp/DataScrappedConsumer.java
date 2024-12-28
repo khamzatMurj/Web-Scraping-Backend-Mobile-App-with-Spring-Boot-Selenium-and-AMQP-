@@ -1,7 +1,7 @@
 package com.mobileappbackend.amqp;
 
 import com.mobileappbackend.Config.RabbitMQConfig;
-import com.mobileappbackend.Dao.ScrappedDataRepository;
+import com.mobileappbackend.Dao.IScrappedDataRepository;
 import com.mobileappbackend.Entities.ScrapedData;
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -18,7 +18,7 @@ import java.util.List;
 public class DataScrappedConsumer {
 
 
-    private final ScrappedDataRepository scrappedDat;
+    private final IScrappedDataRepository scrappedDat;
 
 
 

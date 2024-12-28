@@ -5,13 +5,15 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "ScrapedData")
+@Document(collection = "ScrapedDatadasd")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Builder
 public class ScrapedData {
+    @Id
+    private String id;
 
     private String image;
     private String url;

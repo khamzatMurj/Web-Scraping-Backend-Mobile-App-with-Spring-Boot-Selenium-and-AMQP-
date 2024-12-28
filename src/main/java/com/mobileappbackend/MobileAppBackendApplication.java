@@ -1,6 +1,8 @@
 package com.mobileappbackend;
 
+import com.mobileappbackend.Dao.IScrappedDataRepository;
 import com.mobileappbackend.Dao.IwebsiteRepository;
+import com.mobileappbackend.Entities.ScrapedData;
 import com.mobileappbackend.Entities.website;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +21,7 @@ public class MobileAppBackendApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MobileAppBackendApplication.class, args);
+
     }
 
     @Bean
