@@ -29,7 +29,7 @@
 
 <div>
     <h2>Project Architecture</h2>
-    <a href="https://bernhardwenzel.com/articles/tutorial-build-a-message-driven-microservice-application/">Inspiration :</a>
+    
     <tr>
         <td><img src="img/img_13.png"></td>
     </tr>     
